@@ -7,7 +7,11 @@ const mongoose = require("mongoose");
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors( {
+    origin:["https://base64i-image-tvru.vercel.app"],
+    methods:["POST","GET"],
+    credentials: true
+  }));
 
 /*mongoose.connect(
   "mongodb+srv://IsaacNjenga:cations!@cluster0.xf14h71.mongodb.net/employee"
