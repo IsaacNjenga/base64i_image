@@ -17,7 +17,7 @@ function ImageUpload() {
   }
 
   const uploadImage = () => {
-    fetch("http://localhost:3001/upload-image", {
+    fetch("https://base64i-image.vercel.app/upload-image", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -35,7 +35,7 @@ function ImageUpload() {
   };
 
   const getImage = () => {
-    fetch("http://localhost:3001/get-image", { method: "GET" })
+    fetch("https://base64i-image.vercel.app/get-image", { method: "GET" })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
